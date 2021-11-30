@@ -1,24 +1,16 @@
 package com.pointOnSale.POS.controller;
 
-import static com.embeddigital.common.CONSTANTS.BREADCRUMB_ASSETS_KEY;
-import static com.embeddigital.common.CONSTANTS.BREADCRUMB_HOME_KEY;
-import static com.embeddigital.common.CONSTANTS.BREADCRUMB_SELECT_BRAND_KEY;
-import static com.embeddigital.common.CONSTANTS.ENTITY_FRAGMENT_ASSETS;
-import static com.embeddigital.common.CONSTANTS.REQUIRED_FIELDS_IMAGE_INVALID;
-import static com.embeddigital.common.CONSTANTS.REQUIRED_FIELDS_VIDEO_INVALID;
-import static com.embeddigital.common.enums.AssetTypeEnum.IMAGE;
+import static com.pointOnSale.POS.common.CONSTANTS.BREADCRUMB_ASSETS_KEY;
+import static com.pointOnSale.POS.common.CONSTANTS.BREADCRUMB_HOME_KEY;
+import static com.pointOnSale.POS.common.CONSTANTS.BREADCRUMB_SELECT_BRAND_KEY;
+import static com.pointOnSale.POS.common.CONSTANTS.ENTITY_FRAGMENT_ASSETS;
+import static com.pointOnSale.POS.common.CONSTANTS.REQUIRED_FIELDS_IMAGE_INVALID;
+import static com.pointOnSale.POS.common.CONSTANTS.REQUIRED_FIELDS_VIDEO_INVALID;
+import static com.pointOnSale.POS.common.enums.AssetTypeEnum.IMAGE;
 
-import com.embeddigital.common.enums.AssetTypeEnum;
-import com.embeddigital.domain.Asset;
-import com.embeddigital.domain.Brand;
-import com.embeddigital.model.BreadCrumbModel;
-import com.embeddigital.model.EntityModel;
-import com.embeddigital.model.SearchResponseModel;
-import com.embeddigital.service.AssetsService;
-import com.embeddigital.service.BrandService;
-import com.embeddigital.service.s3.S3Service;
-import com.embeddigital.util.AuthUserUtil;
-import com.embeddigital.util.CommonUtils;
+import com.pointOnSale.POS.common.enums.AssetTypeEnum;
+import com.pointOnSale.POS.domain.Asset;
+import com.pointOnSale.POS.domain.Brand;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;

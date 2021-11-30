@@ -1,34 +1,6 @@
 package com.pointOnSale.POS.service;
 
-import static com.embeddigital.common.CONSTANTS.BRAND_NOT_FOUND;
-import static com.embeddigital.common.CONSTANTS.REQUIRED_FIELDS_IMAGE_INVALID;
-import static com.embeddigital.common.CONSTANTS.REQUIRED_FIELDS_VIDEO_INVALID;
-import static com.embeddigital.common.CONSTANTS.UPDATE_REASON_CODE_RELOAD;
-
-import com.embeddigital.common.enums.AssetTypeEnum;
-import com.embeddigital.domain.Asset;
-import com.embeddigital.domain.AssetVersion;
-import com.embeddigital.domain.Brand;
-import com.embeddigital.domain.Display;
-import com.embeddigital.domain.Item;
-import com.embeddigital.domain.Location;
-import com.embeddigital.domain.Section;
-import com.embeddigital.domain.Store;
-import com.embeddigital.domain.Zone;
-import com.embeddigital.domain.repositories.AssetRepository;
-import com.embeddigital.domain.repositories.AssetVersionRepository;
-import com.embeddigital.domain.repositories.BrandRepository;
-import com.embeddigital.domain.repositories.DisplayRepository;
-import com.embeddigital.domain.repositories.ItemRepository;
-import com.embeddigital.domain.repositories.LocationRepository;
-import com.embeddigital.domain.repositories.SectionRepository;
-import com.embeddigital.domain.repositories.StoreRepository;
-import com.embeddigital.domain.repositories.ZoneRepository;
-import com.embeddigital.model.EntityModel;
-import com.embeddigital.model.SearchResponseModel;
-import com.embeddigital.service.s3.S3Service;
-import com.embeddigital.util.CommonUtils;
-import com.embeddigital.web.exceptions.DMCException;
+import com.pointOnSale.POS.domain.repositories.BrandRepository;
 import com.xuggle.xuggler.ICodec;
 import com.xuggle.xuggler.IContainer;
 import com.xuggle.xuggler.IStream;
@@ -56,11 +28,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- * AssetsService provides Functions for  managing image files and video files in the system
- *
- * @author Kedar (kedar@etasens.com)
- */
 @Service
 @Transactional(rollbackFor = Exception.class)
 @Slf4j
@@ -79,23 +46,6 @@ public class AssetsService extends DMCAbstractListService<Asset> {
   private BrandRepository brandRepository;
 
   @Autowired
-  private DisplayRepository displayRepository;
-
-  @Autowired
-  private ZoneRepository zoneRepository;
-
-  @Autowired
-  private SectionRepository sectionRepository;
-
-  @Autowired
-  private ItemRepository itemRepository;
-
-  @Autowired
-  private S3Service s3Service;
-
-  @Autowired
-  private LocationRepository locationRepository;
-
   @Autowired
   private StoreRepository storeRepository;
 

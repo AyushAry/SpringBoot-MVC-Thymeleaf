@@ -1,18 +1,12 @@
 package com.pointOnSale.POS.service;
 
-import static com.embeddigital.common.CONSTANTS.ALL_DAY;
-
-import com.embeddigital.domain.Brand;
-import com.embeddigital.domain.DisplayGroups;
-import com.embeddigital.domain.Location;
-import com.embeddigital.domain.repositories.BrandRepository;
-import com.embeddigital.domain.support.RoleTypeEnum;
-import com.embeddigital.model.SearchResponseModel;
-import com.embeddigital.util.AuthUserUtil;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.logging.Level;
+
+import com.pointOnSale.POS.domain.Brand;
+import com.pointOnSale.POS.domain.repositories.BrandRepository;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -21,11 +15,6 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- * BrandService provides functions related to Brands
- *
- * @author Kedar (kedar@etasens.com)
- */
 @Log
 @Service
 @Transactional
@@ -34,14 +23,6 @@ public class BrandService extends DMCAbstractListService<Brand> {
   @Autowired
   private BrandRepository brandRepository;
 
-  @Autowired
-  private DisplayGroupsService groupsService;
-
-  @Autowired
-  private AuthUserUtil authUserUtil;
-
-  @Autowired
-  private MailService mailService;
 
   private final String DEFAULT_SORT_BY = "number";
   private final Sort.Direction DEFAULT_SORT_DIRECTION = Sort.Direction.ASC;

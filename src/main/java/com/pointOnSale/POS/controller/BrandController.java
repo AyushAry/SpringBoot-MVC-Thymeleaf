@@ -1,14 +1,10 @@
 package com.pointOnSale.POS.controller;
 
 
-import com.embeddigital.domain.Brand;
-import com.embeddigital.model.BreadCrumbModel;
-import com.embeddigital.model.SearchResponseModel;
-import com.embeddigital.service.BrandService;
-import com.embeddigital.service.IndustryService;
-import com.embeddigital.service.PosSystemService;
-import com.embeddigital.service.UtilityService;
-import com.embeddigital.util.CommonUtils;
+import com.pointOnSale.POS.domain.Brand;
+import com.pointOnSale.POS.model.BreadCrumbModel;
+import com.pointOnSale.POS.model.SearchResponseModel;
+import com.pointOnSale.POS.service.BrandService;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -19,10 +15,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Optional;
 
-import static com.embeddigital.common.CONSTANTS.*;
-import static com.embeddigital.common.CONSTANTS.BREADCRUMB_BRANDS_KEY;
-import static com.embeddigital.common.CONSTANTS.BREADCRUMB_HOME_KEY;
-import static com.embeddigital.common.CONSTANTS.ENTITY_FRAGMENT_BRANDS;
+import static com.pointOnSale.POS.common.CONSTANTS.*;
+import static com.pointOnSale.POS.common.CONSTANTS.BREADCRUMB_BRANDS_KEY;
+import static com.pointOnSale.POS.common.CONSTANTS.BREADCRUMB_HOME_KEY;
+import static com.pointOnSale.POS.common.CONSTANTS.ENTITY_FRAGMENT_BRANDS;
 
 @Log
 @Controller

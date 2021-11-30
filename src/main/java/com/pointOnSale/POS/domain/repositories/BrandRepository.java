@@ -1,7 +1,6 @@
 package com.pointOnSale.POS.domain.repositories;
 
-import com.embeddigital.domain.Brand;
-import com.embeddigital.domain.support.IModelRepo;
+import com.pointOnSale.POS.domain.Brand;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;

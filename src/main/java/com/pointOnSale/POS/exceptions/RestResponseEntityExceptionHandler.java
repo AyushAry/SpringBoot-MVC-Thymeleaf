@@ -1,12 +1,13 @@
 package com.pointOnSale.POS.exceptions;
 
-import static com.embeddigital.common.CONSTANTS.EXCEPTION_MESSAGE_NOACCESS;
-import static com.embeddigital.common.CONSTANTS.EXCEPTION_MESSAGE_UNKNOWN;
-import static com.embeddigital.common.CONSTANTS.EXCEPTION_RESOURCE_NOT_FOUND;
+import static com.pointOnSale.POS.common.CONSTANTS.EXCEPTION_MESSAGE_NOACCESS;
+import static com.pointOnSale.POS.common.CONSTANTS.EXCEPTION_RESOURCE_NOT_FOUND;
 
-import com.embeddigital.util.CommonUtils;
+
 import java.util.logging.Level;
 import javax.servlet.http.HttpServletRequest;
+
+import com.pointOnSale.POS.util.CommonUtils;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
