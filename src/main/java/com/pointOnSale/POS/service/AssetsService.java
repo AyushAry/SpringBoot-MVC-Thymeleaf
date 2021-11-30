@@ -56,11 +56,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- * AssetsService provides Functions for  managing image files and video files in the system
- *
- * @author Kedar (kedar@etasens.com)
- */
 @Service
 @Transactional(rollbackFor = Exception.class)
 @Slf4j
