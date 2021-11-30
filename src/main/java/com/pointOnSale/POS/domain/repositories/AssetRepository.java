@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Repository DAO for Assets
  *
- * @author Kedar (kedar@etasens.com)
+ * 
  */
 public interface AssetRepository extends IModelRepo, JpaRepository<Asset, Long>, JpaSpecificationExecutor<Asset> {
 
